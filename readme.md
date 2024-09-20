@@ -91,5 +91,14 @@ Where:
  is the number of years the money is invested or borrowed for (this will be your parameter passed into the method).
 
  ```js
+account.prototype.ComInterest = function(years, rate) {
+    const principal = this.balance;
+    const interestRate = rate / 100;
+    const compoundedAmount = principal * Math.pow((years + interestRate), years);
+   console.log(Math.ceil(compoundedAmount));
+    
+  };
 
+  // compound being calulate over 5 years using a 0.2(20%) interest.
+  accountNum1.ComInterest(5,.2);
  ```

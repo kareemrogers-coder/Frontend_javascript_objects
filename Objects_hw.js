@@ -85,13 +85,15 @@ account.prototype.withdraw = function(amount){
 accountNum1.withdraw(5);
 
 
+// creating a method to calculate the compound interest.
+
 account.prototype.ComInterest = function(years, rate) {
     const principal = this.balance;
     const interestRate = rate / 100;
     const compoundedAmount = principal * Math.pow((years + interestRate), years);
-    Math.ceil(compoundedAmount);
+   console.log(Math.ceil(compoundedAmount));
     
-    console.log(`${this.balance}`)
   };
 
-  accountNum1.ComInterest(3,.2);
+  // compound being calulate over 5 years using a 0.2(20%) interest.
+  accountNum1.ComInterest(5,.2);
